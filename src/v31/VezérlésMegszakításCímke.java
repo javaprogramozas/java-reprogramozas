@@ -8,7 +8,7 @@ public class VezérlésMegszakításCímke {
             belső:
             for (int j = 1; j <= 10; j++) {
                 if (j > i) {
-                    break külső;
+                    continue külső;
                 }
                 System.out.printf("%3d", i * j);
             }
