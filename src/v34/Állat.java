@@ -13,7 +13,28 @@ public class Állat {
 
     static String származásiHely; // osztályváltozó
 
+    static int állatokSzáma; // 0
+
     String név; // példányváltozó
 
     int tömeg;
+
+    // példányszintű metódusok
+    void eszik() {
+        eszik(1);
+    }
+
+    // metódus túlterhelés - method overload
+    void eszik(int növekmény) {
+        tömeg = tömeg + növekmény;
+    }
+
+    String bemutatkozás() {
+        return név + " a nevem, és " + tömeg + "g vagyok, származási helyem a " + származásiHely;
+    }
+
+    // osztályszintű metódusok
+    static void állatokSzámánakNövelése() {
+        állatokSzáma++;
+    }
 }

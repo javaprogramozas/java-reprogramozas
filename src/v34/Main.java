@@ -29,6 +29,7 @@ public class Main {
         csiga = new Állat(); // példányosítás -> konstruktor
         csiga.név = "Oszkár";
         csiga.tömeg = 20;
+        Állat.állatokSzámánakNövelése();
 
         Állat madár = new Állat();
         madár.név = név;
@@ -38,8 +39,15 @@ public class Main {
         Állat kutya = new Állat();
         kutya.név = null;
 
-        System.out.println(csiga.név + " a nevem, és " + csiga.tömeg + "g vagyok, származási helyem a " + Állat.származásiHely);
-        System.out.println(madár.név + " a nevem, és " + madár.tömeg + "g vagyok, származási helyem a " + Állat.származásiHely);
+        csiga.eszik();
+        madár.eszik(3 + szám);
+
+        String csigaBemutatkozás = csiga.bemutatkozás() + "!";
+        //kutya.bemutatkozás();
+
+        System.out.println(csigaBemutatkozás);
+        System.out.println(madár.bemutatkozás());
         System.out.println(kutya.név + " a nevem, és " + kutya.tömeg + "g vagyok, származási helyem a " + Állat.származásiHely);
+        System.out.println(Állat.állatokSzáma);
     }
 }
