@@ -21,19 +21,25 @@ public class Main {
      */
 
     public static void main(String[] args) {
-        int szám;
+        int szám = 1;
         String név;
         Állat csiga;
 
-        szám = 1;
         név = "Zoltán";
         csiga = new Állat(); // példányosítás -> konstruktor
-        Állat madár = new Állat();
+        csiga.név = "Oszkár";
+        csiga.tömeg = 20;
 
-        System.out.println(szám);
-        System.out.println(név);
-        System.out.println(csiga);
-        System.out.println(madár);
-        System.out.println(csiga == madár);
+        Állat madár = new Állat();
+        madár.név = név;
+        madár.tömeg = szám * 2;
+        //Állat.származásiHely = "Mars";
+
+        Állat kutya = new Állat();
+        kutya.név = null;
+
+        System.out.println(csiga.név + " a nevem, és " + csiga.tömeg + "g vagyok, származási helyem a " + Állat.származásiHely);
+        System.out.println(madár.név + " a nevem, és " + madár.tömeg + "g vagyok, származási helyem a " + Állat.származásiHely);
+        System.out.println(kutya.név + " a nevem, és " + kutya.tömeg + "g vagyok, származási helyem a " + Állat.származásiHely);
     }
 }
