@@ -15,16 +15,23 @@ public class Állat {
 
     static int állatokSzáma; // 0
 
-    String név; // példányváltozó
+    private String név; // példányváltozó
 
-    int tömeg;
+    protected int tömeg;
 
-    Állat(String aNév) {
+    double sebesség;
+
+    private boolean jóllakott;
+
+    public Állat() {
+    }
+
+    public Állat(String aNév) {
         this(aNév, 0);
         System.out.println("Egy paraméteres konstruktor");
     }
 
-    Állat(String aNév, int aTömeg) {
+    public Állat(String aNév, int aTömeg) {
         név = aNév;
         tömeg = aTömeg;
         állatokSzámánakNövelése();
@@ -38,10 +45,17 @@ public class Állat {
     // metódus túlterhelés - method overload
     void eszik(int növekmény) {
         tömeg = tömeg + növekmény;
+        if (növekmény > tömeg * 0.1) {
+            jóllakott = true;
+        }
     }
 
     String bemutatkozás() {
         return név + " a nevem, és " + tömeg + "g vagyok, származási helyem a " + származásiHely;
+    }
+
+    public String nevem() {
+        return név;
     }
 
     // osztályszintű metódusok

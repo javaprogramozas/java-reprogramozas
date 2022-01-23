@@ -37,13 +37,16 @@ public class Main {
 
         csiga.eszik();
         madár.eszik(3 + szám);
+        kutya.tömeg = 100;
+        kutya.sebesség = 10;
+        //kutya.jóllakott = false;
 
         String csigaBemutatkozás = csiga.bemutatkozás() + "!";
         //kutya.bemutatkozás();
 
         System.out.println(csigaBemutatkozás);
         System.out.println(madár.bemutatkozás());
-        System.out.println(kutya.név + " a nevem, és " + kutya.tömeg + "g vagyok, származási helyem a " + Állat.származásiHely);
+        System.out.println(kutya.nevem() + " a nevem, és " + kutya.tömeg + "g vagyok, származási helyem a " + Állat.származásiHely);
         System.out.println(Állat.állatokSzáma);
     }
 }
