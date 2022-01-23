@@ -26,18 +26,14 @@ public class Main {
         Állat csiga;
 
         név = "Zoltán";
-        csiga = new Állat(); // példányosítás -> konstruktor
-        csiga.név = "Oszkár";
-        csiga.tömeg = 20;
+        csiga = new Állat("Oszkár", 20); // példányosítás -> konstruktor
         Állat.állatokSzámánakNövelése();
 
-        Állat madár = new Állat();
-        madár.név = név;
-        madár.tömeg = szám * 2;
+        Állat madár = new Állat(név, szám * 2);
         //Állat.származásiHely = "Mars";
 
-        Állat kutya = new Állat();
-        kutya.név = null;
+        Állat kutya = new Állat(null);
+        //kutya.név = null;
 
         csiga.eszik();
         madár.eszik(3 + szám);

@@ -19,6 +19,17 @@ public class Állat {
 
     int tömeg;
 
+    Állat(String aNév) {
+        this(aNév, 0);
+        System.out.println("Egy paraméteres konstruktor");
+    }
+
+    Állat(String aNév, int aTömeg) {
+        név = aNév;
+        tömeg = aTömeg;
+        állatokSzámánakNövelése();
+    }
+
     // példányszintű metódusok
     void eszik() {
         eszik(1);
