@@ -15,8 +15,17 @@ public class Animal implements Serializable {
     public Animal() {
     }
 
+    public Animal(String name) {
+        this(name, 0);
+    }
+
+    public Animal(String name, int weight) {
+        this.name = name;
+        this.weight = weight;
+    }
+
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -45,5 +54,14 @@ public class Animal implements Serializable {
 
     public void setFull(boolean full) {
         this.full = full;
+    }
+
+    public void introduceSelf() {
+        System.out.println("My name is " + this.getName());
+    }
+
+    public static void calculateSomething() {
+        // HIBÁS!
+        // this.weight = 5;
     }
 }
