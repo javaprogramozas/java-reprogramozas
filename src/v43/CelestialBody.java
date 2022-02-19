@@ -11,4 +11,8 @@ public class CelestialBody {
     public void setName(String name) {
         this.name = name;
     }
+
+    public String description() {
+        return name;
+    }
 }

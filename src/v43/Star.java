@@ -22,7 +22,8 @@ public class Star extends CelestialBody {
         this.coreTemperature = coreTemperature;
     }
 
+    @Override
     public String description() {
-        return "The " + getName() + " is a " + phase + " star";
+        return super.description() + " is a " + phase + " star";
     }
 }

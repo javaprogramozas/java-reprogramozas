@@ -13,6 +13,6 @@ public class Planet extends SolarBody {
     }
 
     public String description() {
-        return "The " + getName() + " is a planet, belongs to " + getBelongsTo().getName();
+        return super.description() + " is a planet, belongs to " + getBelongsTo().getName();
     }
 }
