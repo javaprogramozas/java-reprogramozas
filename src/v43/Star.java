@@ -1,5 +1,7 @@
 package v43;
 
+import java.io.FileNotFoundException;
+
 public class Star extends CelestialBody {
 
     private String phase;
@@ -25,5 +27,10 @@ public class Star extends CelestialBody {
     @Override
     public String description() {
         return super.description() + " is a " + phase + " star";
+    }
+
+    @Override
+    public Star calculateVelocity() throws FileNotFoundException {
+        return null;
     }
 }
