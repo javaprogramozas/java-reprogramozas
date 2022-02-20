@@ -16,7 +16,6 @@ public class Inheritance {
         sun.setName("Sun");
         sun.setPhase("main sequence");
         sun.setCoreTemperature(13600000);
-        //System.out.println(sun.description());
         describeCelestialBody(sun);
 
         Planet earth = new Planet();
@@ -24,7 +23,6 @@ public class Inheritance {
         earth.setBelongsTo(sun);
         earth.setNumberOfMoons(1);
         earth.setLifePresent(true);
-        //System.out.println(earth.description());
         describeCelestialBody(earth);
 
         GiantPlanet jupiter = new GiantPlanet();
@@ -33,10 +31,19 @@ public class Inheritance {
         describeCelestialBody(jupiter);
 
         CelestialBody genericBody = earth;
-        System.out.println(genericBody.description());
+        Planet planet = (Planet) genericBody;
+        //System.out.println(planet.getName() + " has life: " + planet.isLifePresent());
     }
 
     private static void describeCelestialBody(CelestialBody body) {
         System.out.println(body.description());
+        if (body instanceof Planet planet) {
+            System.out.println(planet.getName() + " has life: " + planet.isLifePresent());
+        }
+        System.out.println(body.getClass());
+        if (body.getClass() == SolarBody.class) {
+            SolarBody solarBody = (SolarBody) body;
+            System.out.println(solarBody.getName() + " has " + solarBody.getNumberOfMoons() + " moons");
+        }
     }
 }
