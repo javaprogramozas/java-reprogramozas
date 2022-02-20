@@ -4,6 +4,10 @@ public class Planet extends SolarBody {
 
     private boolean lifePresent;
 
+    public Planet(String name, Star belongsTo) {
+        super(name, belongsTo);
+    }
+
     public boolean isLifePresent() {
         return lifePresent;
     }

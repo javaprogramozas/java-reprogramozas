@@ -6,6 +6,11 @@ public class SolarBody extends CelestialBody {
 
     private int numberOfMoons;
 
+    public SolarBody(String name, Star belongsTo) {
+        super(name);
+        this.belongsTo = belongsTo;
+    }
+
     public Star getBelongsTo() {
         return belongsTo;
     }

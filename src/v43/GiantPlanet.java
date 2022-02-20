@@ -4,6 +4,10 @@ public class GiantPlanet extends SolarBody {
 
     private String type;
 
+    public GiantPlanet(String name, Star belongsTo) {
+        super(name, belongsTo);
+    }
+
     public String getType() {
         return type;
     }

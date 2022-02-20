@@ -6,7 +6,17 @@ public class Star extends CelestialBody {
 
     private String phase;
 
-    private double coreTemperature;
+    private double coreTemperature = 0.0;
+
+    public Star(String name, String phase) {
+        super(name);
+        this.phase = phase;
+        init();
+    }
+
+    private void init() {
+        this.coreTemperature = 5_000_000.0;
+    }
 
     public String getPhase() {
         return phase;
