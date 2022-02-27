@@ -1,5 +1,6 @@
 package v47;
 
+import java.util.Objects;
 import java.util.StringJoiner;
 
 public class Person {
@@ -49,5 +50,16 @@ public class Person {
                 .toString();
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return yearOfBirth == person.yearOfBirth && Objects.equals(name, person.name);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, yearOfBirth);
+    }
 }
