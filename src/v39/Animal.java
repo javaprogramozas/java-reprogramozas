@@ -63,5 +63,6 @@ public class Animal implements Serializable {
     public static void calculateSomething() {
         // HIBÁS!
         // this.weight = 5;
+        System.out.println("Animal calculates something");
     }
 }
