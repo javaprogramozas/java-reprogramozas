@@ -26,4 +26,9 @@ public final class Cat extends Animal {
     public static String callWord() {
         return "Pspspspsps";
     }
+
+    @Override
+    public String toString() {
+        return getName();
+    }
 }
