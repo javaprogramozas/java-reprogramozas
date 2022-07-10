@@ -33,7 +33,7 @@ public class AnonymousExamples {
         System.out.println(myPerson);
     }
 
-    private static List<Person> createPeople() {
+    public static List<Person> createPeople() {
         Person kati = Person.person("Kati", 12);
         Person peti = Person.person("Peti", 31);
         Person laci = Person.person("Laci", 33);
