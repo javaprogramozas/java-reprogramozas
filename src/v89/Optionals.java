@@ -49,20 +49,26 @@ public class Optionals {
 
         // Filter
         Optional<Driver> filtered = testDriver.filter(driver -> driver.getName().startsWith("J"));
-        //System.out.println("Contains driver with name J... -> " + filtered);
+        System.out.println("Contains driver with name J... -> " + filtered);
 
         // Map
         Optional<String> optionalName = testDriver.map(driver -> driver.getName());
-        //System.out.println("Optional(name) -> " + optionalName);
+        System.out.println("Optional(name) -> " + optionalName);
 
         // Flatmap
-        // someTruck() -> name
+        String name = someTruck()
+                .flatMap(truck -> truck.getDriver())
+                .map(driver -> driver.getName())
+                .orElse("Nobody");
 
         // Stream
         long itemsInStream = emptyDriver.stream().count();
-        //System.out.println("Item count: " + itemsInStream);
+        System.out.println("Item count: " + itemsInStream);
 
         // Hol használhatunk Optional típust?
+        // - lokális változó
+        // - metódus visszatérési típusa
+        useLikeThis(john);
     }
 
     public static Driver defaultDriver() {
@@ -74,5 +80,9 @@ public class Optionals {
         Truck truck = new Truck("ABC-123");
         truck.setDriver(new Driver("Tony"));
         return Optional.of(truck);
+    }
+
+    public static void useLikeThis(Driver driver) {
+        Optional.ofNullable(driver).ifPresent(d -> System.out.println(d.getName()));
     }
 }
