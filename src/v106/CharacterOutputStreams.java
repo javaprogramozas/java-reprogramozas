@@ -20,7 +20,7 @@ import java.util.Arrays;
         - PrintWriter
         - StringWriter
  */
-public class OutputStreams {
+public class CharacterOutputStreams {
 
     public static void main(String[] args) {
 
